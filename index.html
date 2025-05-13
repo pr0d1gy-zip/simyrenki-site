@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сім'я Симиренків</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    nav {
+      background: #2d3e50;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .theme-toggle {
+      margin-left: auto;
+      margin-right: 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Symyrenko_estate_Mliiv.jpg') center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-left: 5px solid #86aa42;
+      padding-left: 10px;
+    }
+    .person {
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery figure {
+      text-align: center;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .gallery figcaption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+    .quote {
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-left: 5px solid #86aa42;
+      margin: 40px 0;
+      font-style: italic;
+    }
+    body.dark-mode .quote {
+      background-color: #1e1e1e;
+      color: #ddd;
+      border-left-color: #a4d35f;
+    }
+    .timeline {
+      border-left: 3px solid #86aa42;
+      margin-top: 40px;
+      padding-left: 20px;
+    }
+    .timeline h3 {
+      margin-bottom: 5px;
+    }
+    .timeline p {
+      margin-top: 0;
+      color: #666;
+    }
+    footer {
+      background: #2d3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#home">Головна</a></li>
+    <li><a href="#about">Про родину</a></li>
+    <li><a href="#achievements">Досягнення</a></li>
+    <li><a href="#timeline">Хронологія</a></li>
+    <li><a href="#gallery">Галерея</a></li>
+  </ul>
+  <div class="theme-toggle" onclick="toggleTheme()">🌙 Темна тема</div>
+</nav>
+
+<header id="home">
+  <h1 data-aos="fade-up">Сім'я Симиренків</h1>
+</header>
+
+<section id="about">
+  <h2 data-aos="fade-right">Про родину</h2>
+  <p data-aos="fade-up">Родина Симиренків — одна з найвидатніших родин України XIX–XX століть. Їхній внесок у промисловість, сільське господарство, науку та культуру має історичне значення. Вони стали символом української інтелігенції, меценатства і національного відродження.</p>
+  <div class="quote" data-aos="fade-up">
+    "Ми не тільки будуємо заводи — ми будуємо майбутнє України" — Платон Симиренко
+  </div>
+  <p data-aos="fade-up">Все почалося з Трохима Симиренка — колишнього кріпака, який заснував цукроварню. Його син Платон продовжив справу, модернізував виробництво та побудував перший в Україні пароплав на Дніпрі. Василь Симиренко став видатним меценатом, який фінансував українських діячів, зокрема Шевченка. Левко Симиренко — відомий вчений-помолог, який створив наукову школу садівництва і вивів знаменитий сорт яблук «Ренет Симиренка», що вирощується й сьогодні.</p>
+</section>
+
+<section id="achievements">
+  <h2 data-aos="fade-right">Досягнення</h2>
+  <ul data-aos="fade-up">
+    <li>Побудова першого пароплава в Україні (1843)</li>
+    <li>Створення Мліївської помологічної станції</li>
+    <li>Фінансова підтримка української культури (Шевченко, Костомаров, Драгоманов)</li>
+    <li>Виведення сорту яблук «Ренет Симиренка»</li>
+    <li>Видання українських книжок за власний кошт</li>
+  </ul>
+</section>
+
+<section id="timeline">
+  <h2 data-aos="fade-right">Хронологія родини</h2>
+  <div class="timeline" data-aos="fade-up">
+    <h3>1815</h3>
+    <p>Трохим Симиренко заснував першу цукроварню.</p>
+    <h3>1843</h3>
+    <p>Побудова першого пароплава на Дніпрі.</p>
+    <h3>1860</h3>
+    <p>Платон і Василь Симиренки створили один із найбільших механічних заводів у Центральній Україні.</p>
+    <h3>1895</h3>
+    <p>Левко Симиренко виводить сорт «Ренет Симиренка».</p>
+    <h3>1912</h3>
+    <p>Заснування Мліївської помологічної станції.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 data-aos="fade-right">Галерея</h2>
+  <div class="gallery" data-aos="fade-up">
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Symyrenko_estate_Mliiv.jpg" alt="Садиба Симиренків">
+      <figcaption>Садиба Симиренків в Млієві</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Symyrenko_stamp_1996.jpg" alt="Поштова марка">
+      <figcaption>Поштова марка, присвячена родині Симиренків</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Platon_Symyrenko.jpg" alt="Платон Симиренко">
+      <figcaption>Платон Симиренко</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Vasyl_Symyrenko.jpg" alt="Василь Симиренко">
+      <figcaption>Василь Симиренко</figcaption>
+    </figure>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Levko_Symyrenko.jpg" alt="Левко Симиренко">
+      <figcaption>Левко Симиренко</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Сайт про родину Симиренків. Всі права захищено.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+
+</body>
+</html>
