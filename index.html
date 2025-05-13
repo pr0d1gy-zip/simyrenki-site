@@ -6,16 +6,16 @@
   <title>Сім'я Симиренків</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-  <style>
+    <style>
     html {
       scroll-behavior: smooth;
     }
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      font-size: 20px;
+      font-size: 22px; /* увеличен размер шрифта */
       background-color: #f9f9f9;
-      color: #333;
+      color: #222; /* чуть темнее для контраста */
       transition: background-color 0.3s, color 0.3s;
     }
     body.dark-mode {
@@ -33,6 +33,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 1.1em; /* увеличен размер шрифта */
+      font-weight: bold;
+      letter-spacing: 1px;
     }
     nav ul {
       display: flex;
@@ -41,22 +44,30 @@
       padding: 10px 0;
     }
     nav li {
-      margin: 0 15px;
+      margin: 0 18px;
     }
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #a4d35f;
+      text-shadow: 0 0 5px #fff, 0 0 10px #86aa42;
     }
     .theme-toggle {
       margin-left: auto;
       margin-right: 20px;
       color: white;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 0 5px #86aa42;
     }
     header {
-      background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Symyrenko_estate_Mliiv.jpg') center/cover;
+      background: url('https://upload.wikimedia.org/wikipedia/ru/d/d1/%D0%A1%D0%B8%D0%BC%D0%B8%D1%80%D0%B5%D0%BD%D0%BA%D0%B8.jpg') center/cover;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -65,22 +76,43 @@
       text-align: center;
       color: white;
       padding: 0 20px;
+      text-shadow: 0 2px 8px #000, 0 0 20px #86aa42;
     }
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin-bottom: 0.3em;
-      background-color: rgba(0,0,0,0.6);
-      padding: 10px 20px;
-      border-radius: 10px;
+      background-color: rgba(0,0,0,0.7);
+      padding: 18px 30px;
+      border-radius: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 24px #222;
     }
     section {
       padding: 80px 20px;
       max-width: 900px;
       margin: auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(134,170,66,0.08);
+      margin-bottom: 40px;
+    }
+    body.dark-mode section {
+      background: #181818;
+      box-shadow: 0 2px 16px rgba(164,211,95,0.08);
     }
     h2 {
-      border-left: 5px solid #86aa42;
-      padding-left: 10px;
+      border-left: 7px solid #86aa42;
+      padding-left: 16px;
+      font-size: 2em;
+      font-weight: 700;
+      color: #4a6d1f;
+      text-shadow: 0 2px 8px #eaf7d2;
+      margin-bottom: 30px;
+    }
+    body.dark-mode h2 {
+      color: #a4d35f;
+      text-shadow: 0 2px 8px #222;
     }
     .person {
       margin-bottom: 30px;
@@ -95,46 +127,70 @@
       text-align: center;
       width: 250px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      background: #f8f8f8;
+      padding: 10px;
     }
     .gallery img {
       width: 100%;
       border-radius: 10px;
+      border: 3px solid #86aa42;
+      box-shadow: 0 2px 8px #b7e07a;
     }
     .gallery figcaption {
-      font-size: 14px;
-      color: #555;
+      font-size: 16px;
+      color: #333;
       margin-top: 10px;
+      font-weight: bold;
+      text-shadow: 0 1px 4px #eaf7d2;
     }
     .quote {
       background-color: #f0f0f0;
       padding: 30px;
-      border-left: 5px solid #86aa42;
+      border-left: 7px solid #86aa42;
       margin: 40px 0;
       font-style: italic;
+      font-size: 1.3em;
+      color: #2d3e50;
+      font-weight: bold;
+      text-shadow: 0 1px 6px #eaf7d2;
     }
     body.dark-mode .quote {
       background-color: #1e1e1e;
-      color: #ddd;
+      color: #a4d35f;
       border-left-color: #a4d35f;
+      text-shadow: 0 1px 6px #222;
     }
     .timeline {
-      border-left: 3px solid #86aa42;
+      border-left: 4px solid #86aa42;
       margin-top: 40px;
-      padding-left: 20px;
+      padding-left: 24px;
     }
     .timeline h3 {
       margin-bottom: 5px;
+      font-size: 1.2em;
+      color: #86aa42;
+      font-weight: bold;
+      text-shadow: 0 1px 4px #eaf7d2;
     }
     .timeline p {
       margin-top: 0;
-      color: #666;
+      color: #444;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    body.dark-mode .timeline p {
+      color: #c8e6a0;
     }
     footer {
       background: #2d3e50;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 6px #86aa42;
     }
   </style>
 </head>
@@ -195,23 +251,23 @@
   <h2 data-aos="fade-right">Галерея</h2>
   <div class="gallery" data-aos="fade-up">
     <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Symyrenko_estate_Mliiv.jpg" alt="Садиба Симиренків">
+      <img src="https://itinery.com.ua/img/folder_2/5344/19690_800x600_inst3.jpg" alt="Садиба Симиренків">
       <figcaption>Садиба Симиренків в Млієві</figcaption>
     </figure>
     <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Symyrenko_stamp_1996.jpg" alt="Поштова марка">
+      <img src="https://gdb.rferl.org/b5183614-c1c2-49d4-9828-cf02e3ad5fea_w1080_h608.jpg" alt="Поштова марка">
       <figcaption>Поштова марка, присвячена родині Симиренків</figcaption>
     </figure>
     <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Platon_Symyrenko.jpg" alt="Платон Симиренко">
+      <img src="data:image/jpeg;base64,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" alt="Платон Симиренко">
       <figcaption>Платон Симиренко</figcaption>
     </figure>
     <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Vasyl_Symyrenko.jpg" alt="Василь Симиренко">
+      <img src="https://expedicia.org/wp-content/uploads/2022/07/Vasil-Simirenko.jpg" alt="Василь Симиренко">
       <figcaption>Василь Симиренко</figcaption>
     </figure>
     <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Levko_Symyrenko.jpg" alt="Левко Симиренко">
+      <img src="https://agroelita.info/wp-content/uploads/2021/11/9simirenko.jpg" alt="Левко Симиренко">
       <figcaption>Левко Симиренко</figcaption>
     </figure>
   </div>
